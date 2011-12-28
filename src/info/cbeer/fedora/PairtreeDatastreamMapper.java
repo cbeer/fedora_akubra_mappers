@@ -4,7 +4,6 @@ import java.net.URI;
 import java.io.File;
 
 import gov.loc.repository.pairtree.*;
-import gov.loc.repository.pairtree.Pairtree.InvalidPpathException;
 
 import org.akubraproject.map.IdMapper;
 
