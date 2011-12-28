@@ -20,6 +20,7 @@ info.cbeer.fcrepo.PairtreeMapper class (see [akubra-llstore.example.xml](https:/
 Fedora Pairtree Akubra Mapper will store objects ( and datastreams) in a
 Pairtree-like tree with a BagIt-like object, e.g.:
 
+```
 - pairtree_root/
    * ab/
      * cd/
@@ -28,6 +29,7 @@ Pairtree-like tree with a BagIt-like object, e.g.:
          * data/
              * MyDatastream.0 (Content for managed datastream `MyDatastream` version 0) 
              * MyDatastream.1 (Content for managed datastream `MyDatastream` version 1) 
+```
 
 ### TODO
 Because the FOXML-serialized data is stored in `object.xml`, when an
@@ -55,6 +57,7 @@ For example, if your `akubra-llstore.xml` was configured with:
 
 Your objectStore would look like:
 
+```
 - objectStore/
   * 2010/
   * 2011/
@@ -63,5 +66,6 @@ Your objectStore would look like:
       * 01/
         * info%3Afedora%2Ens%3Aid (FOXML-serialized object representation)
       * 15/
+```
 
 The constructor-arg is a [format string](http://docs.oracle.com/javase/1.5.0/docs/api/java/util/Formatter.html#syntax), with the first argument as a calendar instance and the second the object identifier.
