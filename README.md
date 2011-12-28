@@ -8,7 +8,7 @@ CATALINA_HOME/webapps/fedora/WEB-INF/lib (or some other path in Fedora's
 class path). The other JAR files in `./lib` are only for testing purposes.
 
 1. Update your akubra-llstore.xml to use the
-info.cbeer.fedora.PairtreeMapper class (see [akubra-llstore.example.xml](https://github.com/cbeer/fedora_pairtree_mapper/blob/master/akubra-llstore.example.xml))
+info.cbeer.fcrepo.PairtreeMapper class (see [akubra-llstore.example.xml](https://github.com/cbeer/fedora_pairtree_mapper/blob/master/akubra-llstore.example.xml))
 
 1. Load objects into Fedora
 

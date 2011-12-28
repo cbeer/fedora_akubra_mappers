@@ -1,4 +1,4 @@
-package info.cbeer.fedora;
+package info.cbeer.fcrepo;
 
 import java.net.URI;
 import java.io.File;
@@ -7,7 +7,7 @@ import gov.loc.repository.pairtree.*;
 
 import org.akubraproject.map.IdMapper;
 
-public class PairtreeObjectMapper 
+public class PairtreeDatastreamMapper 
   implements IdMapper {
 
     private static final String internalScheme = "file";
@@ -20,7 +20,7 @@ public class PairtreeObjectMapper
      * @param pathPattern the pattern to use, possibly <code>null</code> or "".
      * @throws IllegalArgumentException if the pattern is invalid.
      */
-    public PairtreeObjectMapper() {
+    public PairtreeDatastreamMapper() {
         this.pt = new Pairtree();
     }
     
@@ -37,7 +37,13 @@ public class PairtreeObjectMapper
             throw new NullPointerException();
         }
         String uri = externalId.toString();
-        return URI.create(internalScheme + ":" + getPath(uri) + "/" + encode(uri) + "/object.xml");
+        String[] uriParts = uri.split("\\" + File.separatorChar); 
+        String dsVersionId = uriParts[uriParts.length - 1];
+        String dsId = dsVersionId.substring(0, dsVersionId.lastIndexOf('.'));
+        String versionId = dsVersionId.substring(dsVersionId.lastIndexOf('.') + 1);
+        String objId = "info:fedora/" + uriParts[uriParts.length - 3];
+        
+        return URI.create(internalScheme + ":" + getPath(objId) + "/" + encode(objId) + "/data/" + encode(dsId) + "." + versionId);
     }
 
     //@Override
@@ -59,9 +65,20 @@ public class PairtreeObjectMapper
     }
     
     public String decode(String uri) {
-      String[] ppathParts = uri.split("\\" + File.separatorChar);
-      String id = ppathParts[ppathParts.length - 2];
-      return pt.uncleanId(id);	
+      String[] ppathParts = uri.split("\\"+ File.separatorChar);
+      String pid = ppathParts[ppathParts.length - 3];
+      String dsidPath = ppathParts[ppathParts.length - 1];
+      int i = dsidPath.lastIndexOf('.');
+      String dsid;
+      String dsversion;
+      if (i == -1) {
+          dsid = dsidPath;
+          dsversion = "0";
+     } else {
+          dsid = dsidPath.substring(0, i);
+          dsversion = dsidPath.substring(i + 1);
+      }
+      return pt.uncleanId(pid) + "/" + pt.uncleanId(dsid) + "/" + pt.uncleanId(dsid) + "." + dsversion;	
     }
     
 }

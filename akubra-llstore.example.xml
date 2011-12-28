@@ -39,7 +39,7 @@
   </bean>
 
   <bean name="fsObjectStoreMapper"
-        class="info.cbeer.fedora.PairtreeObjectMapper"
+        class="info.cbeer.fcrepo.PairtreeObjectMapper"
         singleton="true">
   </bean>
 
@@ -59,7 +59,7 @@
   </bean>
 
   <bean name="fsDatastreamStoreMapper"
-        class="info.cbeer.fedora.PairtreeDatastreamMapper"
+        class="info.cbeer.fcrepo.PairtreeDatastreamMapper"
         singleton="true">
   </bean>
 

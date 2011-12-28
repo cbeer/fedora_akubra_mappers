@@ -1,9 +1,10 @@
-package info.cbeer.fedora;
+package info.cbeer.fcrepo;
 
 import java.net.URI;
 import org.akubraproject.map.IdMapper;
-import info.cbeer.fedora.PairtreeObjectMapper;
-import info.cbeer.fedora.PairtreeDatastreamMapper;
+
+import info.cbeer.fcrepo.PairtreeDatastreamMapper;
+import info.cbeer.fcrepo.PairtreeObjectMapper;
 
 
 import org.junit.Test;
