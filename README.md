@@ -21,10 +21,8 @@ Pairtree-like tree with a BagIt-like object, e.g.:
        * abcd
          * object.xml (FOXML-serialized object representation)
          * data
-           * MyDatastream.0 (Content for managed datastream
-             `MyDatastream` version 0) 
-           * MyDatastream.1 (Content for managed datastream
-             `MyDatastream` version 1) 
+             * MyDatastream.0 (Content for managed datastream `MyDatastream` version 0) 
+             * MyDatastream.1 (Content for managed datastream `MyDatastream` version 1) 
 
 ## TODO
 Because the FOXML-serialized data is stored in `object.xml`, when an
