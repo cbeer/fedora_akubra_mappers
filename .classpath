@@ -2,9 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-  <classpathentry kind="lib" path="/Users/chris/Documents/workspace/fedora-pairtree-mapper/lib/akubra-map-0.3.jar"/>
-  <classpathentry kind="lib" path="/Users/chris/Documents/workspace/fedora-pairtree-mapper/lib/fcrepo-server-3.4.2.jar"/>
-  <classpathentry kind="lib" path="/Users/chris/Documents/workspace/fedora-pairtree-mapper/lib/pairtree-1.1.1.jar"/>
-  <classpathentry kind="lib" path="/Users/chris/Documents/workspace/fedora-pairtree-mapper/lib/junit-4.10.jar"/>
+  <classpathentry kind="lib" path="/Users/chris/Documents/workspace/fedora_akubra_mappers/lib/akubra-map-0.3.jar"/>
+  <classpathentry kind="lib" path="/Users/chris/Documents/workspace/fedora_akubra_mappers/lib/fcrepo-server-3.4.2.jar"/>
+  <classpathentry kind="lib" path="/Users/chris/Documents/workspace/fedora_akubra_mappers/lib/pairtree-1.1.1.jar"/>
+  <classpathentry kind="lib" path="/Users/chris/Documents/workspace/fedora_akubra_mappers/lib/junit-4.10.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
