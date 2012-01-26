@@ -1,7 +1,5 @@
 #!/usr/bin/env jruby
 require 'rubygems'
-require 'bundler'
-Bundler.require(:default)
 
 require 'slop'
 
