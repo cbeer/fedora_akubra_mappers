@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.description = %q{REQUIRES FCREPO 3.4+}
   s.homepage = "http://github.com/cbeer/fedora_akubra_mappers/tree/master/akubra_llstore_migrate"
 
-  s.files        = Dir['lib/**/*'] + Dir['bin/**/*']
+  s.files        = Dir['jars/**/*'] + Dir['lib/**/*'] + Dir['bin/**/*']
   s.executables  = ["akubra_llstore_migrate.rb"]
   s.require_paths = ["lib"]
   s.platform     = 'java'
