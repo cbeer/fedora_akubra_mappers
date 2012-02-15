@@ -28,7 +28,7 @@ public class PairtreeObjectMapper
     public URI getExternalId(URI internalId) throws NullPointerException {
         String fullPath = internalId.toString().substring(
                 internalScheme.length() + 1);
-        return URI.create(decode(fullPath));
+        return URI.create("info:fedora/" + decode(fullPath));
     }
 
     //@Override
@@ -36,7 +36,7 @@ public class PairtreeObjectMapper
         if (externalId == null) {
             throw new NullPointerException();
         }
-        String uri = externalId.toString();
+        String uri = externalId.toString().replace("info:fedora/", "");
         return URI.create(internalScheme + ":" + getPath(uri) + "/" + encode(uri) + "/object.xml");
     }
 
