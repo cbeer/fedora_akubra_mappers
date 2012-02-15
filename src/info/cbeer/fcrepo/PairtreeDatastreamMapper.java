@@ -41,7 +41,7 @@ public class PairtreeDatastreamMapper
         String dsVersionId = uriParts[uriParts.length - 1];
         String dsId = dsVersionId.substring(0, dsVersionId.lastIndexOf('.'));
         String versionId = dsVersionId.substring(dsVersionId.lastIndexOf('.') + 1);
-        String objId = "info:fedora/" + uriParts[uriParts.length - 3];
+        String objId = uriParts[uriParts.length - 3];
         
         return URI.create(internalScheme + ":" + getPath(objId) + "/" + encode(objId) + "/data/" + encode(dsId) + "." + versionId);
     }
